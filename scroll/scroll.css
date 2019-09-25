@@ -1,0 +1,73 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* The whole panel */
+section {
+    width: 400px;
+    margin: 50px auto 0 auto;
+    border: thick solid #aaa;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+/* The header region */
+section header {
+    position: relative;
+    height: 60px;
+    padding: 10px 10px 10px 25px;
+    border-radius: 14px 14px 0 0;
+
+    background-color: #c9394a;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 40px;
+}
+section header a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    font-size: .5rem;
+    line-height: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* The content region, containing a scrollable ordered list */
+#content {
+    overflow: hidden; /* pay attention to this important declaration! */
+
+    width: 340px;
+    height: 120px;
+    margin: 10px auto;
+
+    font-size: .8em; 
+}
+#content ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+#content ol li {
+    line-height: 1.9em;
+}
+li time {
+    float: right;
+    color: #888;
+}
+li a {
+    text-decoration: none;
+    color: black;
+}
+li a:hover,
+li a:focus {
+    color: #f00;
+}

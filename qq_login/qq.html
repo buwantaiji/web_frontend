@@ -1,0 +1,39 @@
+<!DOCTYPE htme>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>qq login page</title>
+        <link rel="stylesheet" href="css/qq.css">
+        <script src="js/qq.js"></script>
+    </head>
+    <body>
+        <div id="panel">
+            <header>
+                <a href="#">
+                    <img src="images/penguin.jpg" alt="qq logo">
+                    <span>登 录</span>
+                </a>
+            </header>
+            <form>
+                <span>账 号:</span> <input type="text" placeholder="QQ号码或Email账号" size="21">
+                <br><br>
+                <span>密 码:</span> <input type="password" size="21">
+            </form>
+            <div id="logincontainer">
+                <input id="loginbutton" type="button" value="登 录">
+                <div id="selectstatesblock">
+                    <a class="online" href="#">我在线上</a>
+                    <ul>
+                        <li><a class="online" href="#">我在线上</a></li>
+                        <li><a class="qme" href="#">Q我吧</a></li>
+                        <li><a class="leave" href="#">离开</a></li>
+                        <li><a class="busy" href="#">忙碌</a></li>
+                        <li><a class="no-interrupt" href="#">请勿打扰</a></li>
+                        <li><a class="hidden" href="#">隐身</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a id="closebtn" href="#"><img src="images/boxy_btn.png" alt="close button"></a>
+        </div>
+    </body>
+</html>

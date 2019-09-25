@@ -1,0 +1,218 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#whole-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* The header, with mooc logo and a navigation links. */
+#whole-container header {
+    height: 70px;
+}
+header img {
+    float: left;
+}
+header nav {
+    float: left;
+    overflow: hidden;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    text-decoration: none;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+}
+nav ul li a {
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #000;
+}
+nav ul li a:hover,
+nav ul li a:active {
+    color: #fff;
+    background-color: #c00;
+}
+
+/* carousel figure region. */
+#carousel img{
+    display: block;
+    width: 100%;
+}
+
+/* The "scrolling news" region. Javascript was added to achive the scrolling effect. */
+#scroll {
+    height: 40px;
+    margin: 10px 0;
+}
+#scroll header {
+    float: left;
+    width: 25%;
+    height: 40px;
+
+    line-height: 40px;
+    text-align: center;
+    background-color: #c00;
+    color: white;
+}
+#scroll > div {
+    float: left;
+    width: 75%;
+    height: 40px;
+
+    background-color: #555;
+}
+#scroll-container {
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 20px;
+}
+#scroll-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 20px;
+    font-size: 14px;
+}
+#scroll-container ul a {
+    text-decoration: none;
+    color: white;
+} 
+
+/* The select discipline region. 
+   A three-column layout with (forced) equal height is achived.
+   Note also that a box-shadow effect when mouse hover over the div within it is added through javascript.
+ */
+#discipline {
+    /* The three block within this div(id = "discipline") is all floating. 
+       Here we manually set the height of this div to a fixed value, to prevent it from having a "collapsed" zero height.
+     */
+    height: 163px;
+}
+#discipline section,
+#infos section {
+    float: left;
+    width: 328px;
+    margin-right: 8px;
+    border: thin solid #ddd;
+}
+#discipline section {
+    cursor: pointer;
+}
+#discipline section:last-child,
+#infos section:last-child {
+    margin-right: 0;
+}
+#discipline section img {
+    display: block;
+    width: 100%;
+}
+#discipline section h2 {
+    margin: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* The infomation presentation region. 
+   Again, a fairly similar three-column layout is achived.
+ */
+#infos {
+    /* Here for avoiding affect causing by the div above(namely the div with id "discipline"), we clear the floating here. */
+    clear: both;
+    /* Also we set the overflow to "hidden", to set a BFC for this div with id "infos". 
+       Notice all three blocks within it is floating.
+     */
+    overflow: hidden;
+    margin: 10px 0;
+}
+#infos section {
+    height: 300px;    
+}
+#infos section > header {
+    height: 30px;
+    padding-left: 20px;
+
+    line-height: 30px;
+    font-size: 16px;
+    background-color: #c00;
+    color: #fff;
+}
+#news article {
+    margin: 0 10px;
+    padding: 10px 0;
+    height: 90px;
+    border-bottom: thin solid #aaa;
+}
+#news article:last-child {
+    border-bottom: none;
+}
+#news article time {
+    float: left;
+    width: 60px;
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 10px;
+
+    background-color: #c00;
+    font-size: 12px;
+    color: #fff;
+}
+#news article h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+#news article h3 a {
+    text-decoration: none;
+    color: #000;
+}
+#news article h3 a:hover,
+#news article h3 a:focus {
+    text-decoration: underline;
+}
+#news article p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+#activity img {
+    display: block;
+    width: 306px;
+    margin: 10px;
+}
+#activity p {
+    margin: 0 10px;
+    
+    line-height: 1.5em;
+    font-size: 12px;
+}
+#contact h3 {
+    margin: 12px 10px 0 10px;
+    font-size: 14px;
+}
+#contact p {
+    margin: 8px 10px;
+    font-size: 12px;
+}
+
+/* The footer. */
+footer {
+    background-color: #e8e8e8;
+    padding: 10px;
+}
+footer p {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 14px;
+}

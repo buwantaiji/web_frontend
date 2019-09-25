@@ -1,0 +1,310 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#instruction,
+#won {
+    width: 80%;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+#won {
+    background-color: #080;
+    color: #fff;
+}
+#board {
+    box-sizing: content-box;
+    position: relative;
+
+    /* dynamic! */
+/*    width: 180px; 
+    height: 180px;
+ */
+
+    margin: 20px auto;
+    border: 20px solid #600;
+    border-radius: 20px;
+    background-color: #cc0;
+}
+#board div {
+    position: absolute;
+
+    /* A movable block(the border included) has both width and height of 60px. */
+    width: 60px;
+    height: 60px;
+
+    border: 5px solid #606;
+    border-radius: 5px;
+    background-color: #ccc;
+
+    line-height: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+.unoccupied {
+    display: none;
+}
+[data-i="0"][data-j="0"] {
+    top: calc(60px * 0);
+    left: calc(60px * 0);
+}
+[data-i="0"][data-j="1"] {
+    top: calc(60px * 0);
+    left: calc(60px * 1);
+}
+[data-i="0"][data-j="2"] {
+    top: calc(60px * 0);
+    left: calc(60px * 2);
+}
+[data-i="0"][data-j="3"] {
+    top: calc(60px * 0);
+    left: calc(60px * 3);
+}
+[data-i="0"][data-j="4"] {
+    top: calc(60px * 0);
+    left: calc(60px * 4);
+}
+[data-i="0"][data-j="5"] {
+    top: calc(60px * 0);
+    left: calc(60px * 5);
+}
+[data-i="0"][data-j="6"] {
+    top: calc(60px * 0);
+    left: calc(60px * 6);
+}
+[data-i="0"][data-j="7"] {
+    top: calc(60px * 0);
+    left: calc(60px * 7);
+}
+[data-i="1"][data-j="0"] {
+    top: calc(60px * 1);
+    left: calc(60px * 0);
+}
+[data-i="1"][data-j="1"] {
+    top: calc(60px * 1);
+    left: calc(60px * 1);
+}
+[data-i="1"][data-j="2"] {
+    top: calc(60px * 1);
+    left: calc(60px * 2);
+}
+[data-i="1"][data-j="3"] {
+    top: calc(60px * 1);
+    left: calc(60px * 3);
+}
+[data-i="1"][data-j="4"] {
+    top: calc(60px * 1);
+    left: calc(60px * 4);
+}
+[data-i="1"][data-j="5"] {
+    top: calc(60px * 1);
+    left: calc(60px * 5);
+}
+[data-i="1"][data-j="6"] {
+    top: calc(60px * 1);
+    left: calc(60px * 6);
+}
+[data-i="1"][data-j="7"] {
+    top: calc(60px * 1);
+    left: calc(60px * 7);
+}
+[data-i="2"][data-j="0"] {
+    top: calc(60px * 2);
+    left: calc(60px * 0);
+}
+[data-i="2"][data-j="1"] {
+    top: calc(60px * 2);
+    left: calc(60px * 1);
+}
+[data-i="2"][data-j="2"] {
+    top: calc(60px * 2);
+    left: calc(60px * 2);
+}
+[data-i="2"][data-j="3"] {
+    top: calc(60px * 2);
+    left: calc(60px * 3);
+}
+[data-i="2"][data-j="4"] {
+    top: calc(60px * 2);
+    left: calc(60px * 4);
+}
+[data-i="2"][data-j="5"] {
+    top: calc(60px * 2);
+    left: calc(60px * 5);
+}
+[data-i="2"][data-j="6"] {
+    top: calc(60px * 2);
+    left: calc(60px * 6);
+}
+[data-i="2"][data-j="7"] {
+    top: calc(60px * 2);
+    left: calc(60px * 7);
+}
+[data-i="3"][data-j="0"] {
+    top: calc(60px * 3);
+    left: calc(60px * 0);
+}
+[data-i="3"][data-j="1"] {
+    top: calc(60px * 3);
+    left: calc(60px * 1);
+}
+[data-i="3"][data-j="2"] {
+    top: calc(60px * 3);
+    left: calc(60px * 2);
+}
+[data-i="3"][data-j="3"] {
+    top: calc(60px * 3);
+    left: calc(60px * 3);
+}
+[data-i="3"][data-j="4"] {
+    top: calc(60px * 3);
+    left: calc(60px * 4);
+}
+[data-i="3"][data-j="5"] {
+    top: calc(60px * 3);
+    left: calc(60px * 5);
+}
+[data-i="3"][data-j="6"] {
+    top: calc(60px * 3);
+    left: calc(60px * 6);
+}
+[data-i="3"][data-j="7"] {
+    top: calc(60px * 3);
+    left: calc(60px * 7);
+}
+[data-i="4"][data-j="0"] {
+    top: calc(60px * 4);
+    left: calc(60px * 0);
+}
+[data-i="4"][data-j="1"] {
+    top: calc(60px * 4);
+    left: calc(60px * 1);
+}
+[data-i="4"][data-j="2"] {
+    top: calc(60px * 4);
+    left: calc(60px * 2);
+}
+[data-i="4"][data-j="3"] {
+    top: calc(60px * 4);
+    left: calc(60px * 3);
+}
+[data-i="4"][data-j="4"] {
+    top: calc(60px * 4);
+    left: calc(60px * 4);
+}
+[data-i="4"][data-j="5"] {
+    top: calc(60px * 4);
+    left: calc(60px * 5);
+}
+[data-i="4"][data-j="6"] {
+    top: calc(60px * 4);
+    left: calc(60px * 6);
+}
+[data-i="4"][data-j="7"] {
+    top: calc(60px * 4);
+    left: calc(60px * 7);
+}
+[data-i="5"][data-j="0"] {
+    top: calc(60px * 5);
+    left: calc(60px * 0);
+}
+[data-i="5"][data-j="1"] {
+    top: calc(60px * 5);
+    left: calc(60px * 1);
+}
+[data-i="5"][data-j="2"] {
+    top: calc(60px * 5);
+    left: calc(60px * 2);
+}
+[data-i="5"][data-j="3"] {
+    top: calc(60px * 5);
+    left: calc(60px * 3);
+}
+[data-i="5"][data-j="4"] {
+    top: calc(60px * 5);
+    left: calc(60px * 4);
+}
+[data-i="5"][data-j="5"] {
+    top: calc(60px * 5);
+    left: calc(60px * 5);
+}
+[data-i="5"][data-j="6"] {
+    top: calc(60px * 5);
+    left: calc(60px * 6);
+}
+[data-i="5"][data-j="7"] {
+    top: calc(60px * 5);
+    left: calc(60px * 7);
+}
+[data-i="6"][data-j="0"] {
+    top: calc(60px * 6);
+    left: calc(60px * 0);
+}
+[data-i="6"][data-j="1"] {
+    top: calc(60px * 6);
+    left: calc(60px * 1);
+}
+[data-i="6"][data-j="2"] {
+    top: calc(60px * 6);
+    left: calc(60px * 2);
+}
+[data-i="6"][data-j="3"] {
+    top: calc(60px * 6);
+    left: calc(60px * 3);
+}
+[data-i="6"][data-j="4"] {
+    top: calc(60px * 6);
+    left: calc(60px * 4);
+}
+[data-i="6"][data-j="5"] {
+    top: calc(60px * 6);
+    left: calc(60px * 5);
+}
+[data-i="6"][data-j="6"] {
+    top: calc(60px * 6);
+    left: calc(60px * 6);
+}
+[data-i="6"][data-j="7"] {
+    top: calc(60px * 6);
+    left: calc(60px * 7);
+}
+[data-i="7"][data-j="0"] {
+    top: calc(60px * 7);
+    left: calc(60px * 0);
+}
+[data-i="7"][data-j="1"] {
+    top: calc(60px * 7);
+    left: calc(60px * 1);
+}
+[data-i="7"][data-j="2"] {
+    top: calc(60px * 7);
+    left: calc(60px * 2);
+}
+[data-i="7"][data-j="3"] {
+    top: calc(60px * 7);
+    left: calc(60px * 3);
+}
+[data-i="7"][data-j="4"] {
+    top: calc(60px * 7);
+    left: calc(60px * 4);
+}
+[data-i="7"][data-j="5"] {
+    top: calc(60px * 7);
+    left: calc(60px * 5);
+}
+[data-i="7"][data-j="6"] {
+    top: calc(60px * 7);
+    left: calc(60px * 6);
+}
+[data-i="7"][data-j="7"] {
+    top: calc(60px * 7);
+    left: calc(60px * 7);
+}

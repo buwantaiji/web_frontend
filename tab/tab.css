@@ -1,0 +1,49 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#container {
+    margin: 20px auto;
+    padding: 0;
+    width: 300px;
+    border: 2px solid #666;
+
+    list-style-type: none;
+}
+#container li h2 {
+    margin: 0;
+    height: 1.5em;
+    border-bottom: thin solid #ccc;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #ddd;
+
+    cursor: pointer;
+}
+#container li ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+#container li ul.hidden {
+    /* we set a "hidden" class to classify those inner lists who are set to hidden now. */
+    /* We then can use javascript to change the class the corresponding inner list belongs to. */
+    display: none;
+}
+#container li ul a {
+    display: block;
+    text-decoration: none;
+    color: #00c;
+}
+#container li ul a:hover,
+#container li ul a:focus {
+    color: #fff;
+    background-color: #00c;
+}

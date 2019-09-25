@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#list {
+    margin: 0;
+    padding: 0;
+}
+#list li {
+    display: inline-block;
+    line-height: 2em;
+    border: thin solid grey;
+    border-bottom: none;
+    margin-left: 5px;
+}
+#list li.switched {
+    border: medium solid brown;
+    border-bottom: none;
+}
+#list li a {
+    height: 2em;
+    padding: 10px;
+}
+#list li a:hover,
+#list li a:focus {
+    background-color: blue;
+    color: white;
+}
+#infoblock {
+    width: 300px;
+    border: thin solid blue;
+    border-top: medium solid brown;
+}
+
+.hidden {
+    display: none;
+}

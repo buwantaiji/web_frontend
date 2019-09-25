@@ -1,0 +1,158 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+/* The whole login panel */
+#panel {
+    position: absolute;
+    top: 180px;
+    left: 400px;
+
+    width: 400px;
+    height: 250px;
+    border: thin solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0 80px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+                -5px 5px 10px rgba(0, 0, 0, 0.3),
+                5px -5px 10px rgba(0, 0, 0, 0.3),
+                -5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button on the top right corner */
+#closebtn img {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* header region, containing the qq logo */
+header {
+    border-bottom: thin solid #ddd;
+    margin-bottom: 30px;
+}
+header a {
+    display: block;
+    padding: 0 40px;
+    text-decoration: none;
+    color: black;
+}
+header img {
+    width: 80px;
+    height: 60px;
+    vertical-align: middle;
+}
+header span {
+    vertical-align: middle;
+
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* input block, with fields of username and password */
+form span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* login button */
+#logincontainer {
+    position: relative;
+}
+
+#loginbutton {
+    padding: 0 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+
+    line-height: 1.8em;
+    background-image: linear-gradient(to bottom, #aaf, #00f);
+    color: white;
+
+}
+#loginbutton:hover, 
+#loginbutton:focus {
+    background-image: linear-gradient(to bottom right, #aaf, #00f);
+}
+#loginbutton:active {
+    background-image: linear-gradient(to bottom right, #baf, #b0f);
+}
+
+/* The select-states region */
+#selectstatesblock {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: .8em;
+}    
+#selectstatesblock ul {
+    display: none;
+
+    margin: 0;
+    padding: 0;
+    border: thin solid #bbb;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, .7);
+    list-style-type: none;
+    background-color: white;
+}
+ul a,
+#selectstatesblock > a {
+    display: inline-block;
+    width: 100px;
+    padding-left: 20px;
+
+    text-decoration: none;
+    color: black;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+#selectstatesblock > a {
+    border: thin solid #ddd;
+}
+ul a.online,
+#selectstatesblock > a.online {
+    background-image: url(../images/online.jpg);
+    background-size: 1.5em 1.5em;
+}
+ul a.qme,
+#selectstatesblock > a.qme {
+    background-image: url(../images/qme.jpg);
+    background-size: 1.3em 1.3em;
+}
+ul a.leave,
+#selectstatesblock > a.leave {
+    background-image: url(../images/leave.jpg);
+    background-size: 1.2em 1.2em;
+}
+ul a.busy,
+#selectstatesblock > a.busy {
+    background-image: url(../images/busy.png);
+    background-size: 1.2em 1.2em;
+}
+ul a.no-interrupt,
+#selectstatesblock > a.no-interrupt {
+    background-image: url(../images/no-interrupt.jpg);
+    background-size: 1.2em 1.2em;
+}
+ul a.hidden,
+#selectstatesblock > a.hidden {
+    background-image: url(../images/hidden.jpg);
+    background-size: 1.2em 1.2em;
+}
+ul a:hover, 
+ul a:focus,
+#selectstatesblock > a:hover,
+#selectstatesblock > a:focus {
+    background-color: #808080;
+}
+ul a:active,
+#selectstatesblock > a:active {
+    background-color: #808080;
+    color: white;
+}
